@@ -1,0 +1,65 @@
+id,text,language,content_type,sentiment,intent,topic,ambiguous,notes
+es-001,Pedí unos audífonos el lunes y todavía no llegan. El rastreo dice 'en tránsito' desde hace cinco días.,es,support_message,negative,complaint,delivery,false,
+es-002,¿Cómo cambio el correo asociado a mi cuenta? No encuentro la opción en el perfil.,es,support_message,neutral,question,account_access,false,
+es-003,La batería del reloj dura casi tres días. Muy contento con la compra.,es,product_review,positive,praise,product_quality,false,
+es-004,Me cobraron dos veces el mismo pedido. Necesito que me devuelvan uno de los pagos.,es,support_message,negative,request,billing,false,Complains and asks for a concrete action (refund): request wins (rule 4.2).
+es-005,"Buen producto, pero el envío tardó el doble de lo prometido.",es,product_review,mixed,complaint,delivery,false,Contrastive 'pero': the second clause carries the main point (rule 4.3).
+es-006,Sería útil poder filtrar los productos por precio en la aplicación.,es,survey_comment,neutral,suggestion,app_experience,false,
+es-007,"Excelente atención de Laura en el chat, resolvió mi problema en diez minutos.",es,survey_comment,positive,praise,customer_service,false,
+es-008,Ya les escribí tres veces y nadie responde. Qué servicio tan 'eficiente'.,es,support_message,negative,complaint,customer_service,false,Sarcasm: 'eficiente' in quotes means the opposite. Label the intended meaning (rule 3.4).
+es-009,El pedido llegó completo y bien empacado.,es,product_review,positive,praise,delivery,false,
+es-010,Solo para avisar que ya recibí el reembolso. Gracias.,es,support_message,positive,information,billing,false,
+es-011,No puedo iniciar sesión desde ayer. Me sale 'contraseña incorrecta' aunque la acabo de restablecer.,es,support_message,negative,complaint,account_access,false,Problem report without an explicit action request: complaint (rule 4.1).
+es-012,¿El plan anual se puede pagar en cuotas?,es,support_message,neutral,question,billing,false,
+es-013,La app se cierra sola cada vez que intento abrir el carrito.,es,support_message,negative,complaint,app_experience,false,
+es-014,"La tela es suave, pero los colores se destiñeron después del primer lavado.",es,product_review,mixed,complaint,product_quality,false,
+es-015,¡Me encantó! Ya es el tercer pedido que hago y siempre llega antes de lo previsto.,es,product_review,positive,praise,delivery,false,
+es-016,Quisiera cancelar mi suscripción a partir del próximo mes.,es,support_message,neutral,request,billing,false,Subscriptions belong to billing (topic definition).
+es-017,Deberían agregar la opción de pagar con transferencia bancaria.,es,survey_comment,neutral,suggestion,billing,false,
+es-018,Hoy aprendí a hacer pan en casa 🍞,es,social_post,positive,information,other,false,Unrelated to the service: topic other.
+es-019,El tamaño de la camiseta no corresponde a la tabla de tallas. Quiero cambiarla por una talla más grande.,es,support_message,negative,request,product_quality,false,
+es-020,"No sé si el problema es de la app o de mi celular, pero las notificaciones no me llegan.",es,support_message,negative,complaint,app_experience,true,Writer is unsure of the cause; labeled app_experience because the symptom (notifications) is an app feature.
+en-001,My order arrived two days early and everything was well packed. Great job!,en,product_review,positive,praise,delivery,false,
+en-002,How do I download my invoices from last year?,en,support_message,neutral,question,billing,false,
+en-003,I was charged after cancelling my subscription. Please refund the last payment.,en,support_message,negative,request,billing,false,
+en-004,"The headphones sound great, but the left ear cushion started peeling after a month.",en,product_review,mixed,complaint,product_quality,false,Contrastive 'but' (rule 4.3).
+en-005,Love the new dark mode in the app!,en,social_post,positive,praise,app_experience,false,
+en-006,"Oh great, another update that logs me out every time. Thanks a lot.",en,social_post,negative,complaint,app_experience,false,Sarcasm: 'Oh great' and 'Thanks a lot' are ironic (rule 3.4).
+en-007,"Just a heads-up: I changed my phone number in my profile, so please use that one for delivery calls.",en,support_message,neutral,request,delivery,true,"Topic could be account_access (profile change) or delivery (purpose of the message). Chose delivery: rule 5.2, the topic linked to the intent."
+en-008,Can I change the delivery address after the order has shipped?,en,support_message,neutral,question,delivery,false,"Asks whether something is possible, not for the action itself: question (rule 4.4)."
+en-009,Your support agent was polite but couldn't answer any of my questions.,en,survey_comment,mixed,complaint,customer_service,false,
+en-010,It would be nice to save more than one payment card.,en,survey_comment,neutral,suggestion,billing,false,
+en-011,The jacket is exactly as described. Fits well.,en,product_review,positive,praise,product_quality,false,
+en-012,I've been waiting on hold for 40 minutes. This is ridiculous.,en,social_post,negative,complaint,customer_service,false,
+en-013,"I can't reset my password, the reset email never arrives.",en,support_message,negative,complaint,account_access,false,
+en-014,The product is okay.,en,product_review,neutral,opinion,product_quality,false,Lukewarm evaluation without clear positive or negative content: neutral (rule 3.3).
+en-015,"Received the replacement today, thank you.",en,support_message,positive,information,delivery,false,
+en-016,Please delete my account and all the data associated with it.,en,support_message,neutral,request,account_access,false,
+en-017,Is there a student discount?,en,support_message,neutral,question,billing,false,
+en-018,Watching the sunset from the beach tonight. Perfect end to the week.,en,social_post,positive,information,other,false,
+en-019,"The app is fast, the checkout is simple, and I never had a problem. Five stars.",en,product_review,positive,praise,app_experience,false,
+en-020,"Not sure if this is the right place to ask, but do you ship to Canada?",en,social_post,neutral,question,delivery,false,"Here 'but' introduces the actual question, not a contrast in opinion."
+fr-001,Ma commande est arrivée cassée. Je souhaite un remboursement.,fr,support_message,negative,request,delivery,true,"Damage could come from transport (delivery) or from the product itself (product_quality). 'Arrivée cassée' points to transport, so delivery."
+fr-002,Comment puis-je modifier mon mot de passe ?,fr,support_message,neutral,question,account_access,false,
+fr-003,"Service client très réactif, merci à toute l'équipe !",fr,survey_comment,positive,praise,customer_service,false,
+fr-004,L'application plante à chaque fois que j'ajoute un article au panier.,fr,support_message,negative,complaint,app_experience,false,
+fr-005,"Le colis devait arriver mardi, nous sommes vendredi et toujours rien.",fr,support_message,negative,complaint,delivery,false,
+fr-006,"Bonne qualité, mais un peu cher pour ce que c'est.",fr,product_review,mixed,complaint,product_quality,false,"Comments on price/value of a product go to product_quality, not billing (topic definition). Contrastive 'mais' (rule 4.3)."
+fr-007,Est-ce que je peux payer en plusieurs fois ?,fr,support_message,neutral,question,billing,false,
+fr-008,Ce serait pratique d'avoir un mode hors connexion dans l'appli.,fr,survey_comment,neutral,suggestion,app_experience,false,
+fr-009,"Livraison rapide, produit conforme. Je recommande.",fr,product_review,positive,praise,delivery,false,Two topics with equal weight: the first one mentioned is chosen (rule 5.3).
+fr-010,Je n'arrive pas à me connecter depuis la mise à jour.,fr,support_message,negative,complaint,account_access,true,Could be app_experience (caused by the update). Chose account_access because the symptom is a login failure (rule 5.1).
+fr-011,"Merci, j'ai bien reçu le remboursement.",fr,support_message,positive,information,billing,false,
+fr-012,Je voudrais annuler mon abonnement à la fin du mois.,fr,support_message,neutral,request,billing,false,
+fr-013,"Franchement, trois semaines pour une réponse, bravo...",fr,social_post,negative,complaint,customer_service,false,Sarcasm: 'bravo...' after a three-week delay is ironic (rule 3.4).
+fr-014,"Le produit est correct, sans plus.",fr,product_review,neutral,opinion,product_quality,false,'Sans plus' marks a lukewarm evaluation: neutral (rule 3.3).
+fr-015,Pouvez-vous m'envoyer la facture de ma dernière commande ?,fr,support_message,neutral,request,billing,false,"Polite question form asking for an action: request, not question (rule 4.4)."
+fr-016,Il faudrait ajouter plus de tailles pour les enfants.,fr,survey_comment,neutral,suggestion,product_quality,false,
+fr-017,Super week-end à la montagne avec les amis !,fr,social_post,positive,information,other,false,
+fr-018,La conseillère m'a raccroché au nez.,fr,social_post,negative,complaint,customer_service,false,
+fr-019,Vous livrez en Belgique ?,fr,social_post,neutral,question,delivery,false,
+fr-020,Le casque est confortable et la batterie tient longtemps. Très satisfait.,fr,product_review,positive,praise,product_quality,false,
+fr-021,"Je suis trop happy avec ma commande, merci !",fr,social_post,positive,praise,other,true,"'Happy' is a common anglicism in informal French; one borrowed word does not make the text mixed (rule 2.2). Topic: the order in general, no specific aspect, so other."
+mx-001,"El delivery llegó late otra vez, so annoying.",mixed,social_post,negative,complaint,delivery,false,Spanish + English code-switching across clauses (rule 2.2).
+mx-002,¿Alguien sabe si they ship to Colombia? I can't find it en la página.,mixed,social_post,neutral,question,delivery,false,"Spanish + English, alternating within the sentence."
+mx-003,"Commande reçue, todo perfecto, gracias !",mixed,social_post,positive,praise,delivery,false,French + Spanish.
