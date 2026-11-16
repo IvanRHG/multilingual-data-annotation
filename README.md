@@ -1,5 +1,7 @@
 # Multilingual Data Annotation — Spanish · English · French
 
+[![validate](https://github.com/IvanRHG/multilingual-data-annotation/actions/workflows/tests.yml/badge.svg)](https://github.com/IvanRHG/multilingual-data-annotation/actions/workflows/tests.yml)
+
 A small, fully documented annotation project: 64 short customer-feedback texts in Spanish, English, French, and mixed-language form, each labeled for **language, content type, sentiment, intent, and topic**. Every label follows written guidelines and is checked by an automated validator.
 
 > **Project type:** personal, demonstrative project. All texts are **original and fictional**, written for this repository. They do not come from real customers, companies, or existing datasets, and contain no personal data.
