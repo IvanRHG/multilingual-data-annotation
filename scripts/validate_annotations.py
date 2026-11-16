@@ -238,7 +238,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
-        args.report.write_text(distribution_report(result, schema), encoding="utf-8")
+        args.report.write_text(distribution_report(result, schema), encoding="utf-8", newline="\n")
         print(f"report written to {args.report}")
     if args.csv and result.ok:
         export_csv(result.records, args.csv, list(schema["required_fields"]))
