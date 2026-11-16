@@ -138,7 +138,7 @@ pip install pytest
 python -m pytest
 ```
 
-The validator exits with code `0` when there are no errors and `1` otherwise, so it can run in CI.
+The validator exits with code `0` when there are no errors and `1` otherwise, so it runs in CI (GitHub Actions) on every push.
 
 ## Technologies
 
@@ -156,7 +156,6 @@ Python 3 (standard library) · JSONL / CSV · pytest · Markdown · Mermaid
 - Have a second annotator label the same items independently and report agreement per task.
 - Add an adjudication step for disagreements and update the guidelines with the outcome.
 - Add Portuguese or Italian to extend the multilingual coverage.
-- Run the validator with GitHub Actions on every pull request.
 
 ## License
 
