@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "required_fields": {
+    "id": "string",
+    "text": "string",
+    "language": "string",
+    "content_type": "string",
+    "sentiment": "string",
+    "intent": "string",
+    "topic": "string",
+    "ambiguous": "boolean",
+    "notes": "string"
+  },
+  "labels": {
+    "language": ["es", "en", "fr", "mixed"],
+    "content_type": ["product_review", "support_message", "survey_comment", "social_post"],
+    "sentiment": ["positive", "negative", "neutral", "mixed"],
+    "intent": ["complaint", "praise", "opinion", "question", "request", "suggestion", "information"],
+    "topic": ["billing", "delivery", "product_quality", "account_access", "customer_service", "app_experience", "other"]
+  },
+  "id_prefix_by_language": {
+    "es": "es-",
+    "en": "en-",
+    "fr": "fr-",
+    "mixed": "mx-"
+  },
+  "consistency_rules": {
+    "intent_allowed_sentiments": {
+      "praise": ["positive"],
+      "complaint": ["negative", "mixed"],
+      "opinion": ["neutral", "mixed"]
+    },
+    "notes_required_when": ["ambiguous == true", "language == mixed"]
+  },
+  "max_text_length": 500
+}
